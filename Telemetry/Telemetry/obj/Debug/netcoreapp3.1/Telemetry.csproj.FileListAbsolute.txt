@@ -1,0 +1,13 @@
+C:\Users\mathe\source\repos\Telemetry\Telemetry\bin\Debug\netcoreapp3.1\Telemetry.exe
+C:\Users\mathe\source\repos\Telemetry\Telemetry\bin\Debug\netcoreapp3.1\Telemetry.deps.json
+C:\Users\mathe\source\repos\Telemetry\Telemetry\bin\Debug\netcoreapp3.1\Telemetry.runtimeconfig.json
+C:\Users\mathe\source\repos\Telemetry\Telemetry\bin\Debug\netcoreapp3.1\Telemetry.runtimeconfig.dev.json
+C:\Users\mathe\source\repos\Telemetry\Telemetry\bin\Debug\netcoreapp3.1\Telemetry.dll
+C:\Users\mathe\source\repos\Telemetry\Telemetry\bin\Debug\netcoreapp3.1\Telemetry.pdb
+C:\Users\mathe\source\repos\Telemetry\Telemetry\obj\Debug\netcoreapp3.1\Telemetry.AssemblyInfoInputs.cache
+C:\Users\mathe\source\repos\Telemetry\Telemetry\obj\Debug\netcoreapp3.1\Telemetry.AssemblyInfo.cs
+C:\Users\mathe\source\repos\Telemetry\Telemetry\obj\Debug\netcoreapp3.1\Telemetry.csproj.CoreCompileInputs.cache
+C:\Users\mathe\source\repos\Telemetry\Telemetry\obj\Debug\netcoreapp3.1\Telemetry.dll
+C:\Users\mathe\source\repos\Telemetry\Telemetry\obj\Debug\netcoreapp3.1\Telemetry.pdb
+C:\Users\mathe\source\repos\Telemetry\Telemetry\obj\Debug\netcoreapp3.1\Telemetry.genruntimeconfig.cache
+C:\Users\mathe\source\repos\Telemetry\Telemetry\obj\Debug\netcoreapp3.1\Telemetry.csprojAssemblyReference.cache
