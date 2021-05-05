@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -7,6 +7,7 @@ namespace Telemetry
 {
   class mainclass
   {
+    static Dictionary<String, String> podio = new Dictionary<String, String>();
 
     public static void Main()
     {
@@ -37,9 +38,10 @@ namespace Telemetry
     public static void StartRun()
     {
       MoveCar move = new MoveCar();
+
       for (int i = 1; i < 11; i++)
       {
-        move.Start(i.ToString());
+        podio = move.Start(i.ToString());
       }
       move.countdownEvent.Wait();
     }
@@ -47,7 +49,7 @@ namespace Telemetry
     public static void ShowData()
     {
       MoveCar move = new MoveCar();
-      move.ShowPodium();
+      move.ShowPodium(podio);
     }
   }
 }
