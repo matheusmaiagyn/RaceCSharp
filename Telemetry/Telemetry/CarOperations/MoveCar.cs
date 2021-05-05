@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using System.Diagnostics;
 
 namespace Telemetry
 {
@@ -10,16 +11,19 @@ namespace Telemetry
     public Carro car = new Carro();
     Random random = new Random();
     static int howManyCars = 10;
-    static List<String> podio = new List<string>(howManyCars);
-    int count = 0;
+    static List<String> finish = new List<string>(howManyCars);
     public CountdownEvent countdownEvent = new CountdownEvent(howManyCars);
+
+    Dictionary<String, String> value = new Dictionary<String, String>();
 
     public void Move(String numCar)
     {
       int maxDistance = 3000;
-      podio.Clear();
+      value.Clear();
       car.setSpeed((float)random.NextDouble());
+      Stopwatch sw = new Stopwatch();
 
+      sw.Start();
       while (car.getLoc() <= maxDistance)
       {
         if (random.Next(0, 1) == 1)
@@ -31,23 +35,26 @@ namespace Telemetry
         }
         Console.WriteLine(numCar + " localização: " + car.getLoc());
       }
+      sw.Stop();
 
-      count += 1;
-      podio.Add(numCar);
       countdownEvent.Signal();
+      value.Add(numCar, sw.Elapsed.ToString());
     }
 
-    public void ShowPodium()
+    public void ShowPodium(Dictionary<String, String> podio)
     {
-        Console.WriteLine("\nPodio: ");
-        foreach (String p in podio)
-          Console.WriteLine(p);
+      Console.WriteLine("\nPodio: ");
+
+      //for(int i = 0; i < podio.Count; i++)
+        foreach (var p in podio)
+          Console.WriteLine(p.Key + " Tempo: " + p.Value);
     }
 
-    public void Start(String numCar)
+    public Dictionary<String, String> Start(String numCar)
     {
       Thread t = new Thread(() => Move(numCar));
       t.Start();
+      return value;
     }
   }
 }
