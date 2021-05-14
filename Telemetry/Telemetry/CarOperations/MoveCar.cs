@@ -45,7 +45,6 @@ namespace Telemetry
     {
       Console.WriteLine("\nPodio: ");
 
-      //for(int i = 0; i < podio.Count; i++)
         foreach (var p in podio)
           Console.WriteLine(p.Key + " Tempo: " + p.Value);
     }
